@@ -1,0 +1,30 @@
+.extra {
+    background-image: linear-gradient(
+      to right,
+      #54b3d6,
+      #54b3d6 50%,
+      
+    );
+    position: relative;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .extra:before{
+    content: '';
+    background: #72c8f4;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .extra:hover {
+   background-position: 0;
+  }
+  
+  .extra:hover::before{
+    width: 100%;
+  }

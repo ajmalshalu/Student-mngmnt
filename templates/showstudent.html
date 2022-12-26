@@ -1,0 +1,34 @@
+
+{% extends 'base.html'%}
+
+{% load static %}
+
+{% block title %}   {% endblock %}
+
+{% block content %}
+<h1 class="text-dark d-flex justify-content-center mt-3">Show Student Details</h1><hr  style="border:2px solid red;margin-right: 40%;margin-left: 40%">
+<table class="table table-dark table-striped" style="text-align:center;padding:20px;width:60%;margin-left:20%;margin-top:5%; border-radius: 20px;">
+    <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Email</th>
+          <th scope="col">Address</th>
+          <th scope="col">Place</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      {% for i in form %}
+        <tr>
+            <td>{{i.student_name}}</td>
+            <td>{{i.student_phone}}</td>
+            <td>{{i.student_email}}</td>
+            <td>{{i.student_address}}</td>
+            <td>{{i.student_place}}</td>
+            <td><a href="{% url 'edit' %}?edit={{i.student_id}}" class="btn text-light btn-outline-secondary">Edit</a></td>
+            <td><a href="{% url 'delete' %}?delete={{i.student_id}}" class="btn text-light btn-outline-secondary">Delete</a></td>
+        </tr>
+      {% endfor %}
+</table>      
+{% endblock %}

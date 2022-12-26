@@ -1,0 +1,20 @@
+
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block title %}   {% endblock %}
+
+{% block content %}
+<h1 class="text-dark d-flex justify-content-center mt-3">Student Form</h1>
+<hr  style="border:2px solid red;margin-right: 40%;margin-left: 40%">
+<div class="container w-25 text-center p-3 my-5 bg-success">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form | crispy}}
+        <br>
+        <button class="btn btn-outline-warning btn-light mb-4" type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Source+Sans+Pro&family=Yellowtail&display=swap');
+body{
+   /* background: linear-gradient(132deg, rgb(249, 202, 120) 0.00%, rgb(212, 206, 169) 50.00%, rgb(172, 192, 191) 100.00%); */
+    /* background: linear-gradient(45deg, red, blue); */
+   margin: 0;
+   font-family: 'Source Sans Pro', sans-serif;
+   background-image:url(../image/TUBI60MockUP.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+
+}
+ input:invalid{
+   animation:shake .3s;
+ }
+ .error{
+   border:solid red !important;
+}
+.success{
+   border:solid green !important;
+}
+body::after{
+   content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+	z-index: -1;
+ }
+
+ body #outer{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    margin-right: 200px;
+   
+ }
+ body #outer #inner{
+    background-color: white;
+    padding: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-top: 10%;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgb(54 52 52);
+}
+ #outer #inner #headers{
+   font-size: 21px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ body #outer #inner .input1{
+    margin-bottom: 10px;
+    margin-right:70px;
+    
+ }
+ body #outer #inner .input1 input{
+   border-radius: 5px;
+   font-family: 'Source Sans Pro', sans-serif;
+   margin-left: -35px;
+   height: 35px;  
+   width: 190%;
+   border: 1px solid rgb(204, 212, 227);
+   background-color: rgb(232, 234, 238);
+ }
+ 
+ body #outer #inner #input2{
+    margin-bottom: 10px;
+    margin-right: 20vh;
+    
+   
+ }
+ body #outer #inner #input2 input{
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    background-color: rgb(60, 110, 225);
+    font-family:'Source Sans Pro', sans-serif;
+    
+ }
+ /* input:hover{
+    background-color: grey;
+ } */
+ body #outer #inner #header h2{
+    text-align: center;
+    font-weight: bold;
+    font-family:'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    /* text-transform: uppercase; */
+ }
+ body #outer #inner #footer{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -12px;
+    margin-top: -12px;
+
+ }
+
+ /* body #outer #inner #footer input{
+    border-radius: 10px;
+    width: 97.5%;
+    color: white;
+    background-color: black;
+    font-family:  'Neucha', cursive;
+ } */
+
+ button{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    border-radius: 5px;
+    /* width: 91%;
+    background-color: rgb(8, 186, 61); */
+    font-family:'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    /* margin-left: 10px; */
+ }
+ #input2 button:hover{
+    background-color: tomato;
+    color:white
+ }
+
+ @keyframes shake{
+   25% { transform: translateX(4px)}
+   50% { transform: translateX(-4px)}
+   75% { transform: translateX(4px)}
+ }

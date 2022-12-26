@@ -1,0 +1,51 @@
+
+{% extends 'base.html'%}
+
+{% load static %}
+
+{% block title %}   {% endblock %}
+
+{% block content %}
+
+
+<h1 class="text-dark d-flex justify-content-center mt-3">Edit Profile</h1><hr  style="border:2px solid red;margin-right: 40%;margin-left: 40%">
+
+<form action="" method="POST" class="container">
+  
+  {% for message in messages %}
+  <h5 class="text-center text-secondary">{{message}}</h5>
+  {% endfor %}
+
+  {% csrf_token %}
+  {% for i in form %}
+
+<div class="bg-light p-5" style="text-align:center;padding:20px;width:60%;margin-left:20%;margin-top:5%; border-radius: 20px;">
+    
+<div class="input-group mb-3">
+  <span class="input-group-text bg-dark text-light" id="basic-addon3" style="width:20%">Name</span>
+  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="name"  placeholder="{{i.name1}} {{i.name2}}">
+</div>
+
+<div class="input-group mb-3">
+    <span class="input-group-text bg-dark text-light" id="basic-addon3" style="width:20%">Phone Number</span>
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="phno" placeholder="{{i.phno}}">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text bg-dark text-light" id="basic-addon3" style="width:20%">Password</span>
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="password" placeholder="{{i.password}}">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text bg-dark text-light" id="basic-addon3" style="width:20%">Email</span>
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="email" placeholder="{{i.email}}">
+  </div>
+
+</div>
+
+<button type="submit" class="btn btn-dark " value=""  style="margin-left: 70%;margin-top: 2%;width:5%">Edit</button>
+{% endfor %}
+</form>
+
+
+{% endblock %}

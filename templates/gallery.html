@@ -1,0 +1,74 @@
+
+{% extends 'mainbase.html'%}
+
+{% load static %}
+
+{% block title %}   {% endblock %}
+
+{% block content %}
+
+<div class="contained">
+  <div class="outted text-center grid" >
+    {% comment %} <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      .row {
+        display: flex;
+      }
+      
+      /* Create three equal columns that sits next to each other */
+      .column {
+        flex: 33.33%;
+        padding: 55px;
+      }
+      </style>
+    
+    <div class="row">
+      <div class="column">
+        <img src="{% static '/image/OIP.jpg'%}" alt="Snow" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static '/image/OIP (1).jpg'%}" alt="Forest" style="width:100%">
+      </div>
+      
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="{% static '/image/OIP (2).jpg'%}" alt="Snow" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static '/image/OIP (3).jpg'%}" alt="Forest" style="width:100%">
+      </div>
+      
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="{% static '/image/OIP (4).jpg'%}" alt="Snow" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static '/image/OIP (5).jpg'%}" alt="Forest" style="width:100%">
+      </div>
+      
+    </div> {% endcomment %}
+    <div class="inned g-col-4">
+      <img src="{% static '/image/OIP.jpg'%}" class="rounded float" alt="...">
+      <img src="{% static '/image/OIP (1).jpg'%}" class="rounded float" alt="...">
+      <img src="{% static '/image/OIP (2).jpg'%}" class="rounded float" alt="...">
+      <img src="{% static '/image/OIP (3).jpg'%}" class="rounded float" alt="...">
+      <img src="{% static '/image/OIP (4).jpg'%}" class="rounded float" alt="...">
+      <img src="{% static '/image/OIP (5).jpg'%}" class="rounded float" alt="...">
+      <img src="{% static '/image/OIP (6).jpg'%}" class="rounded float" alt="...">
+    </div> 
+</div>
+
+
+{% comment %} 
+<div>
+    <div class="g-col-6"><img src="{% static '/image/OIP.jpg'%}"></div>
+    <div class="g-col-6"><img src="{% static '/image/OIP (1).jpg'%}"></div>
+    <div class="g-col-6"><img src="{% static '/image/OIP (2).jpg'%}"></div>
+  </div> {% endcomment %}
+
+{% endblock %}
